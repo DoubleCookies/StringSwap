@@ -39,13 +39,13 @@
             this.buttonGalleryGenerator = new System.Windows.Forms.Button();
             this.textBoxL = new System.Windows.Forms.TextBox();
             this.textBoxR = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelLeftBorder = new System.Windows.Forms.Label();
+            this.labelRightBorder = new System.Windows.Forms.Label();
             this.textBoxLevelName = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelLevelName = new System.Windows.Forms.Label();
             this.checkBoxSpace = new System.Windows.Forms.CheckBox();
             this.buttonBCEnemyTemplate = new System.Windows.Forms.Button();
-            this.textBoxExtention = new System.Windows.Forms.TextBox();
+            this.textBoxExtension = new System.Windows.Forms.TextBox();
             this.buttonRemoveInfoboxParam = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.общееToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -130,9 +130,9 @@
             // 
             this.buttonGalleryGenerator.Location = new System.Drawing.Point(904, 365);
             this.buttonGalleryGenerator.Name = "buttonGalleryGenerator";
-            this.buttonGalleryGenerator.Size = new System.Drawing.Size(248, 46);
+            this.buttonGalleryGenerator.Size = new System.Drawing.Size(244, 46);
             this.buttonGalleryGenerator.TabIndex = 12;
-            this.buttonGalleryGenerator.Text = "Генератор названий файлов для галерей";
+            this.buttonGalleryGenerator.Text = "Сгенерировать список файлов";
             this.buttonGalleryGenerator.UseVisualStyleBackColor = true;
             this.buttonGalleryGenerator.Click += new System.EventHandler(this.buttonGalleryGenerator_Click);
             // 
@@ -150,23 +150,23 @@
             this.textBoxR.Size = new System.Drawing.Size(100, 22);
             this.textBoxR.TabIndex = 14;
             // 
-            // label3
+            // labelLeftBorder
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(863, 420);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 17);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Left";
+            this.labelLeftBorder.AutoSize = true;
+            this.labelLeftBorder.Location = new System.Drawing.Point(863, 420);
+            this.labelLeftBorder.Name = "labelLeftBorder";
+            this.labelLeftBorder.Size = new System.Drawing.Size(32, 17);
+            this.labelLeftBorder.TabIndex = 15;
+            this.labelLeftBorder.Text = "Left";
             // 
-            // label4
+            // labelRightBorder
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1003, 420);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 17);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Right";
+            this.labelRightBorder.AutoSize = true;
+            this.labelRightBorder.Location = new System.Drawing.Point(1003, 420);
+            this.labelRightBorder.Name = "labelRightBorder";
+            this.labelRightBorder.Size = new System.Drawing.Size(41, 17);
+            this.labelRightBorder.TabIndex = 16;
+            this.labelRightBorder.Text = "Right";
             // 
             // textBoxLevelName
             // 
@@ -175,14 +175,14 @@
             this.textBoxLevelName.Size = new System.Drawing.Size(244, 22);
             this.textBoxLevelName.TabIndex = 17;
             // 
-            // label5
+            // labelLevelName
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(860, 458);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 17);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Text";
+            this.labelLevelName.AutoSize = true;
+            this.labelLevelName.Location = new System.Drawing.Point(860, 458);
+            this.labelLevelName.Name = "labelLevelName";
+            this.labelLevelName.Size = new System.Drawing.Size(35, 17);
+            this.labelLevelName.TabIndex = 18;
+            this.labelLevelName.Text = "Text";
             // 
             // checkBoxSpace
             // 
@@ -206,13 +206,13 @@
             this.buttonBCEnemyTemplate.UseVisualStyleBackColor = true;
             this.buttonBCEnemyTemplate.Click += new System.EventHandler(this.buttonBCEnemyTemplate_Click);
             // 
-            // textBoxExtention
+            // textBoxExtension
             // 
-            this.textBoxExtention.Location = new System.Drawing.Point(1165, 455);
-            this.textBoxExtention.Name = "textBoxExtention";
-            this.textBoxExtention.Size = new System.Drawing.Size(78, 22);
-            this.textBoxExtention.TabIndex = 28;
-            this.textBoxExtention.Text = "jpg";
+            this.textBoxExtension.Location = new System.Drawing.Point(1165, 455);
+            this.textBoxExtension.Name = "textBoxExtension";
+            this.textBoxExtension.Size = new System.Drawing.Size(78, 22);
+            this.textBoxExtension.TabIndex = 28;
+            this.textBoxExtension.Text = "jpg";
             // 
             // buttonRemoveInfoboxParam
             // 
@@ -231,7 +231,7 @@
             this.общееToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1288, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1288, 30);
             this.menuStrip1.TabIndex = 34;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -245,7 +245,7 @@
             this.удалениеИзображенийToolStripMenuItem,
             this.спискиДляНавбоксовToolStripMenuItem});
             this.общееToolStripMenuItem.Name = "общееToolStripMenuItem";
-            this.общееToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
+            this.общееToolStripMenuItem.Size = new System.Drawing.Size(71, 26);
             this.общееToolStripMenuItem.Text = "Общее";
             this.общееToolStripMenuItem.MouseEnter += new System.EventHandler(this.общееToolStripMenuItem_MouseEnter);
             // 
@@ -305,13 +305,13 @@
             this.Controls.Add(this.buttonRemoveGallery);
             this.Controls.Add(this.buttonBCCatTemplate3rd);
             this.Controls.Add(this.buttonRemoveInfoboxParam);
-            this.Controls.Add(this.textBoxExtention);
+            this.Controls.Add(this.textBoxExtension);
             this.Controls.Add(this.buttonBCEnemyTemplate);
             this.Controls.Add(this.checkBoxSpace);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.labelLevelName);
             this.Controls.Add(this.textBoxLevelName);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelRightBorder);
+            this.Controls.Add(this.labelLeftBorder);
             this.Controls.Add(this.textBoxR);
             this.Controls.Add(this.textBoxL);
             this.Controls.Add(this.buttonGalleryGenerator);
@@ -347,13 +347,13 @@
         private System.Windows.Forms.Button buttonGalleryGenerator;
         private System.Windows.Forms.TextBox textBoxL;
         private System.Windows.Forms.TextBox textBoxR;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelLeftBorder;
+        private System.Windows.Forms.Label labelRightBorder;
         private System.Windows.Forms.TextBox textBoxLevelName;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelLevelName;
         private System.Windows.Forms.CheckBox checkBoxSpace;
         private System.Windows.Forms.Button buttonBCEnemyTemplate;
-        private System.Windows.Forms.TextBox textBoxExtention;
+        private System.Windows.Forms.TextBox textBoxExtension;
         private System.Windows.Forms.Button buttonRemoveInfoboxParam;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem общееToolStripMenuItem;

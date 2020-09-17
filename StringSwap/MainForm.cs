@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -14,7 +13,6 @@ namespace StringSwap
         {
             InitializeComponent();
         }
-        Methods methodsCustomer = new Methods();
 
         //Замена текста
         private void buttonTextReplace_Click(object sender, EventArgs e)
@@ -28,7 +26,7 @@ namespace StringSwap
         private void buttonTextReplaceAfterDelimeter_Click(object sender, EventArgs e)
         {
             string res = richTextBoxStart.Text;
-            res = methodsCustomer.replaceWithDelimeter(textBoxWhat.Text, textBoxOnWhat.Text, res);
+            res = Methods.replaceWithDelimeter(textBoxWhat.Text, textBoxOnWhat.Text, res);
             richTextBoxFinish.Text = res;
         }
 
@@ -38,10 +36,10 @@ namespace StringSwap
             int left = int.Parse(textBoxL.Text);
             int right = int.Parse(textBoxR.Text);
             string levelName = textBoxLevelName.Text;
-            string add = textBoxExtention.Text;
+            string add = textBoxExtension.Text;
             if (checkBoxSpace.Checked)
                 levelName += " ";
-            string res = methodsCustomer.Generator(levelName, left, right, add);
+            string res = Methods.Generator(levelName, left, right, add);
             richTextBoxFinish.Text = res;
         }
 
@@ -49,12 +47,11 @@ namespace StringSwap
         private void buttonRemoveGallery_Click(object sender, EventArgs e)
         {
             string start = richTextBoxStart.Text;
-            string finish = methodsCustomer.AddFilePrefix(start);
+            string finish = Methods.AddFilePrefix(start);
             richTextBoxFinish.Text = finish;
         }
 
         private static readonly Regex InfoboxCustomLvl = Tools.NestedTemplateRegex(new List<string>("Пользовательский уровень".Split(',')));
-        private static readonly Regex InfoboxPerson = Tools.NestedTemplateRegex(new List<string>("Игрок".Split(',')));
         private void buttonRemoveInfoboxParam_Click(object sender, EventArgs e)
         {
             string text = richTextBoxStart.Text;
@@ -96,7 +93,7 @@ namespace StringSwap
         private void переворачиваниеСпискаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string start = richTextBoxStart.Text;
-            string finish = methodsCustomer.TranformText(start);
+            string finish = Methods.TranformText(start);
             richTextBoxFinish.Text = finish;
         }
 

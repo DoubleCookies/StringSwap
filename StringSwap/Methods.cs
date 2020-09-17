@@ -2,14 +2,14 @@
 
 namespace StringSwap
 {
-    public class Methods
+    public static class Methods
     {
         /// <summary>
         /// Метод для переворачивания списка
         /// </summary>
         /// <param name="text">исходный текст</param>
         /// <returns>Текст, в котором строки перевернуты</returns>
-        public string TranformText(string text)
+        public static string TranformText(string text)
         {
             string res = "";
             string[] array = text.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
@@ -36,7 +36,7 @@ namespace StringSwap
         /// <param name="onWhat">Новый фрагмент</param>
         /// <param name="text">Исходный текст</param>
         /// <returns>Возвращает фрагмент текста, в котором старый фрагмент заменён на новый</returns>
-        public string replaceWithDelimeter(string what, string onWhat, string text)
+        public static string replaceWithDelimeter(string what, string onWhat, string text)
         {
             string[] arr = text.Split(new string[] { "|", "\n" }, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0; i < arr.Length; i++)
@@ -68,7 +68,7 @@ namespace StringSwap
         /// <param name="right">Правая граница диапазона</param>
         /// <param name="add">Расширение файла</param>
         /// <returns>Возвращает строку, содержащую имена всех файлов в указанном диапазоне</returns>
-        public string Generator(string basic, int left, int right, string extention)
+        public static string Generator(string basic, int left, int right, string extention)
         {
             string res = "";
             for (int i = left; i <= right; i++)
@@ -86,7 +86,7 @@ namespace StringSwap
         /// </summary>
         /// <param name="text">Исходный текст</param>
         /// <returns>Текст, в котором каждой строке добавлен префикс "File:"</returns>
-        public string AddFilePrefix(string text) {
+        public static string AddFilePrefix(string text) {
             string updatedText = "";
             string[] arr = text.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0; i < arr.Length; i++)
