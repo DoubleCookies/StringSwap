@@ -86,13 +86,12 @@ namespace StringSwap
         /// </summary>
         /// <param name="text">Исходный текст</param>
         /// <returns>Текст, в котором каждой строке добавлен префикс "File:"</returns>
-        public static string AddFilePrefix(string text) {
+        public static string AddFilePrefix(string text)
+        {
             string updatedText = "";
             string[] arr = text.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
             for (int i = 0; i < arr.Length; i++)
-            {
-                    updatedText += "File:" + arr[i] + "\r\n";
-            }
+                updatedText += "File:" + arr[i] + "\r\n";
             return updatedText;
         }
     }

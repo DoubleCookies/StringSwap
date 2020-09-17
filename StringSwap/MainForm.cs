@@ -74,16 +74,8 @@ namespace StringSwap
                 char symb = start[i];
                 if (symb == '"')
                 {
-                    if (first)
-                    {
-                        first = false;
-                        start[i] = '«';
-                    }
-                    else
-                    {
-                        first = true;
-                        start[i] = '»';
-                    }
+                    start[i] = first ? '«' : '»';
+                    first = !first;
                 }
             }
             richTextBoxFinish.Text = start.ToString();
@@ -107,9 +99,7 @@ namespace StringSwap
             for (int i = 0; i < arr.Length; i++)
             {
                 string buf = arr[i].Trim();
-                if (buf.Length < 5 || buf.Contains("КБ") || buf.Contains("МБ"))
-                { }
-                else
+                if (buf.Length >= 5 && !buf.Contains("КБ") && !buf.Contains("МБ"))
                 {
                     if (count == 0)
                     {
