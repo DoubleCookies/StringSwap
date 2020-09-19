@@ -1,4 +1,10 @@
 # StringSwap
-Small project for processing text in different ways. Most methods are created for MediaWiki and FANDOM better experience.
+Small project for processing text. Most methods created for MediaWiki and FANDOM better experience (replacing text, getting filenames, navbox generation, etc). StringSwap uses C# and Windows Forms.
 
-README and other things are in progress. Stay tuned!
+## Launch
+- Clone repo
+- Open solution (for example in Visual Studio)
+- Build it
+
+## License
+This project has [MIT License](https://opensource.org/licenses/MIT)

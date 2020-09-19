@@ -44,17 +44,14 @@
             this.textBoxLevelName = new System.Windows.Forms.TextBox();
             this.labelLevelName = new System.Windows.Forms.Label();
             this.checkBoxSpace = new System.Windows.Forms.CheckBox();
-            this.buttonBCEnemyTemplate = new System.Windows.Forms.Button();
             this.textBoxExtension = new System.Windows.Forms.TextBox();
-            this.buttonRemoveInfoboxParam = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.общееToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.заменаКавычекToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.переворачиваниеСпискаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.удалениеИзображенийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.спискиДляНавбоксовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buttonBCCatTemplate3rd = new System.Windows.Forms.Button();
-            this.buttonRemoveGallery = new System.Windows.Forms.Button();
+            this.удалениеГалерейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,9 +65,9 @@
             // 
             // richTextBoxFinish
             // 
-            this.richTextBoxFinish.Location = new System.Drawing.Point(792, 30);
+            this.richTextBoxFinish.Location = new System.Drawing.Point(621, 30);
             this.richTextBoxFinish.Name = "richTextBoxFinish";
-            this.richTextBoxFinish.Size = new System.Drawing.Size(472, 324);
+            this.richTextBoxFinish.Size = new System.Drawing.Size(530, 324);
             this.richTextBoxFinish.TabIndex = 1;
             this.richTextBoxFinish.Text = "";
             // 
@@ -128,7 +125,7 @@
             // 
             // buttonGalleryGenerator
             // 
-            this.buttonGalleryGenerator.Location = new System.Drawing.Point(904, 365);
+            this.buttonGalleryGenerator.Location = new System.Drawing.Point(786, 365);
             this.buttonGalleryGenerator.Name = "buttonGalleryGenerator";
             this.buttonGalleryGenerator.Size = new System.Drawing.Size(244, 46);
             this.buttonGalleryGenerator.TabIndex = 12;
@@ -138,14 +135,14 @@
             // 
             // textBoxL
             // 
-            this.textBoxL.Location = new System.Drawing.Point(904, 417);
+            this.textBoxL.Location = new System.Drawing.Point(786, 417);
             this.textBoxL.Name = "textBoxL";
             this.textBoxL.Size = new System.Drawing.Size(93, 22);
             this.textBoxL.TabIndex = 13;
             // 
             // textBoxR
             // 
-            this.textBoxR.Location = new System.Drawing.Point(1048, 417);
+            this.textBoxR.Location = new System.Drawing.Point(930, 417);
             this.textBoxR.Name = "textBoxR";
             this.textBoxR.Size = new System.Drawing.Size(100, 22);
             this.textBoxR.TabIndex = 14;
@@ -153,7 +150,7 @@
             // labelLeftBorder
             // 
             this.labelLeftBorder.AutoSize = true;
-            this.labelLeftBorder.Location = new System.Drawing.Point(863, 420);
+            this.labelLeftBorder.Location = new System.Drawing.Point(745, 420);
             this.labelLeftBorder.Name = "labelLeftBorder";
             this.labelLeftBorder.Size = new System.Drawing.Size(32, 17);
             this.labelLeftBorder.TabIndex = 15;
@@ -162,7 +159,7 @@
             // labelRightBorder
             // 
             this.labelRightBorder.AutoSize = true;
-            this.labelRightBorder.Location = new System.Drawing.Point(1003, 420);
+            this.labelRightBorder.Location = new System.Drawing.Point(885, 420);
             this.labelRightBorder.Name = "labelRightBorder";
             this.labelRightBorder.Size = new System.Drawing.Size(41, 17);
             this.labelRightBorder.TabIndex = 16;
@@ -170,7 +167,7 @@
             // 
             // textBoxLevelName
             // 
-            this.textBoxLevelName.Location = new System.Drawing.Point(904, 455);
+            this.textBoxLevelName.Location = new System.Drawing.Point(786, 455);
             this.textBoxLevelName.Name = "textBoxLevelName";
             this.textBoxLevelName.Size = new System.Drawing.Size(244, 22);
             this.textBoxLevelName.TabIndex = 17;
@@ -178,7 +175,7 @@
             // labelLevelName
             // 
             this.labelLevelName.AutoSize = true;
-            this.labelLevelName.Location = new System.Drawing.Point(860, 458);
+            this.labelLevelName.Location = new System.Drawing.Point(742, 458);
             this.labelLevelName.Name = "labelLevelName";
             this.labelLevelName.Size = new System.Drawing.Size(35, 17);
             this.labelLevelName.TabIndex = 18;
@@ -189,40 +186,20 @@
             this.checkBoxSpace.AutoSize = true;
             this.checkBoxSpace.Checked = true;
             this.checkBoxSpace.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxSpace.Location = new System.Drawing.Point(1165, 418);
+            this.checkBoxSpace.Location = new System.Drawing.Point(1047, 418);
             this.checkBoxSpace.Name = "checkBoxSpace";
             this.checkBoxSpace.Size = new System.Drawing.Size(80, 21);
             this.checkBoxSpace.TabIndex = 19;
             this.checkBoxSpace.Text = "Пробел";
             this.checkBoxSpace.UseVisualStyleBackColor = true;
             // 
-            // buttonBCEnemyTemplate
-            // 
-            this.buttonBCEnemyTemplate.Location = new System.Drawing.Point(577, 30);
-            this.buttonBCEnemyTemplate.Name = "buttonBCEnemyTemplate";
-            this.buttonBCEnemyTemplate.Size = new System.Drawing.Size(189, 48);
-            this.buttonBCEnemyTemplate.TabIndex = 20;
-            this.buttonBCEnemyTemplate.Text = "Шаблон враги BCats wiki";
-            this.buttonBCEnemyTemplate.UseVisualStyleBackColor = true;
-            this.buttonBCEnemyTemplate.Click += new System.EventHandler(this.buttonBCEnemyTemplate_Click);
-            // 
             // textBoxExtension
             // 
-            this.textBoxExtension.Location = new System.Drawing.Point(1165, 455);
+            this.textBoxExtension.Location = new System.Drawing.Point(1047, 455);
             this.textBoxExtension.Name = "textBoxExtension";
             this.textBoxExtension.Size = new System.Drawing.Size(78, 22);
             this.textBoxExtension.TabIndex = 28;
             this.textBoxExtension.Text = "jpg";
-            // 
-            // buttonRemoveInfoboxParam
-            // 
-            this.buttonRemoveInfoboxParam.Location = new System.Drawing.Point(577, 159);
-            this.buttonRemoveInfoboxParam.Name = "buttonRemoveInfoboxParam";
-            this.buttonRemoveInfoboxParam.Size = new System.Drawing.Size(189, 46);
-            this.buttonRemoveInfoboxParam.TabIndex = 30;
-            this.buttonRemoveInfoboxParam.Text = "Удаление параметров в инфобоксе";
-            this.buttonRemoveInfoboxParam.UseVisualStyleBackColor = true;
-            this.buttonRemoveInfoboxParam.Click += new System.EventHandler(this.buttonRemoveInfoboxParam_Click);
             // 
             // menuStrip1
             // 
@@ -231,7 +208,7 @@
             this.общееToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1288, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1163, 28);
             this.menuStrip1.TabIndex = 34;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -243,9 +220,10 @@
             this.заменаКавычекToolStripMenuItem,
             this.переворачиваниеСпискаToolStripMenuItem,
             this.удалениеИзображенийToolStripMenuItem,
-            this.спискиДляНавбоксовToolStripMenuItem});
+            this.спискиДляНавбоксовToolStripMenuItem,
+            this.удалениеГалерейToolStripMenuItem});
             this.общееToolStripMenuItem.Name = "общееToolStripMenuItem";
-            this.общееToolStripMenuItem.Size = new System.Drawing.Size(71, 26);
+            this.общееToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.общееToolStripMenuItem.Text = "Общее";
             this.общееToolStripMenuItem.MouseEnter += new System.EventHandler(this.общееToolStripMenuItem_MouseEnter);
             // 
@@ -277,36 +255,19 @@
             this.спискиДляНавбоксовToolStripMenuItem.Text = "Списки для навбоксов";
             this.спискиДляНавбоксовToolStripMenuItem.Click += new System.EventHandler(this.спискиДляНавбоксовToolStripMenuItem_Click);
             // 
-            // buttonBCCatTemplate3rd
+            // удалениеГалерейToolStripMenuItem
             // 
-            this.buttonBCCatTemplate3rd.Location = new System.Drawing.Point(577, 94);
-            this.buttonBCCatTemplate3rd.Name = "buttonBCCatTemplate3rd";
-            this.buttonBCCatTemplate3rd.Size = new System.Drawing.Size(189, 48);
-            this.buttonBCCatTemplate3rd.TabIndex = 35;
-            this.buttonBCCatTemplate3rd.Text = "Шаблон коты BCats wiki\r\n3rd form";
-            this.buttonBCCatTemplate3rd.UseVisualStyleBackColor = true;
-            this.buttonBCCatTemplate3rd.Click += new System.EventHandler(this.buttonBCCatTemplate3rd_Click);
-            // 
-            // buttonRemoveGallery
-            // 
-            this.buttonRemoveGallery.Location = new System.Drawing.Point(577, 222);
-            this.buttonRemoveGallery.Name = "buttonRemoveGallery";
-            this.buttonRemoveGallery.Size = new System.Drawing.Size(189, 46);
-            this.buttonRemoveGallery.TabIndex = 40;
-            this.buttonRemoveGallery.Text = "Удалятор галерей";
-            this.buttonRemoveGallery.UseVisualStyleBackColor = true;
-            this.buttonRemoveGallery.Click += new System.EventHandler(this.buttonRemoveGallery_Click);
+            this.удалениеГалерейToolStripMenuItem.Name = "удалениеГалерейToolStripMenuItem";
+            this.удалениеГалерейToolStripMenuItem.Size = new System.Drawing.Size(272, 26);
+            this.удалениеГалерейToolStripMenuItem.Text = "Удаление галерей";
+            this.удалениеГалерейToolStripMenuItem.Click += new System.EventHandler(this.удалениеГалерейToolStripMenuItem_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1288, 513);
-            this.Controls.Add(this.buttonRemoveGallery);
-            this.Controls.Add(this.buttonBCCatTemplate3rd);
-            this.Controls.Add(this.buttonRemoveInfoboxParam);
+            this.ClientSize = new System.Drawing.Size(1163, 497);
             this.Controls.Add(this.textBoxExtension);
-            this.Controls.Add(this.buttonBCEnemyTemplate);
             this.Controls.Add(this.checkBoxSpace);
             this.Controls.Add(this.labelLevelName);
             this.Controls.Add(this.textBoxLevelName);
@@ -352,17 +313,14 @@
         private System.Windows.Forms.TextBox textBoxLevelName;
         private System.Windows.Forms.Label labelLevelName;
         private System.Windows.Forms.CheckBox checkBoxSpace;
-        private System.Windows.Forms.Button buttonBCEnemyTemplate;
         private System.Windows.Forms.TextBox textBoxExtension;
-        private System.Windows.Forms.Button buttonRemoveInfoboxParam;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem общееToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem заменаКавычекToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem переворачиваниеСпискаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem удалениеИзображенийToolStripMenuItem;
-        private System.Windows.Forms.Button buttonBCCatTemplate3rd;
         private System.Windows.Forms.ToolStripMenuItem спискиДляНавбоксовToolStripMenuItem;
-        private System.Windows.Forms.Button buttonRemoveGallery;
+        private System.Windows.Forms.ToolStripMenuItem удалениеГалерейToolStripMenuItem;
     }
 }
 
