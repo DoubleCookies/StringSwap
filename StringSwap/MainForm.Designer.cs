@@ -135,35 +135,36 @@
             // 
             // textBoxL
             // 
-            this.textBoxL.Location = new System.Drawing.Point(786, 417);
+            this.textBoxL.Location = new System.Drawing.Point(786, 422);
             this.textBoxL.Name = "textBoxL";
-            this.textBoxL.Size = new System.Drawing.Size(93, 22);
+            this.textBoxL.Size = new System.Drawing.Size(73, 22);
             this.textBoxL.TabIndex = 13;
+            this.textBoxL.Text = "1";
             // 
             // textBoxR
             // 
-            this.textBoxR.Location = new System.Drawing.Point(930, 417);
+            this.textBoxR.Location = new System.Drawing.Point(957, 422);
             this.textBoxR.Name = "textBoxR";
-            this.textBoxR.Size = new System.Drawing.Size(100, 22);
+            this.textBoxR.Size = new System.Drawing.Size(73, 22);
             this.textBoxR.TabIndex = 14;
             // 
             // labelLeftBorder
             // 
             this.labelLeftBorder.AutoSize = true;
-            this.labelLeftBorder.Location = new System.Drawing.Point(745, 420);
+            this.labelLeftBorder.Location = new System.Drawing.Point(733, 425);
             this.labelLeftBorder.Name = "labelLeftBorder";
-            this.labelLeftBorder.Size = new System.Drawing.Size(32, 17);
+            this.labelLeftBorder.Size = new System.Drawing.Size(47, 17);
             this.labelLeftBorder.TabIndex = 15;
-            this.labelLeftBorder.Text = "Left";
+            this.labelLeftBorder.Text = "Старт";
             // 
             // labelRightBorder
             // 
             this.labelRightBorder.AutoSize = true;
-            this.labelRightBorder.Location = new System.Drawing.Point(885, 420);
+            this.labelRightBorder.Location = new System.Drawing.Point(895, 425);
             this.labelRightBorder.Name = "labelRightBorder";
-            this.labelRightBorder.Size = new System.Drawing.Size(41, 17);
+            this.labelRightBorder.Size = new System.Drawing.Size(56, 17);
             this.labelRightBorder.TabIndex = 16;
-            this.labelRightBorder.Text = "Right";
+            this.labelRightBorder.Text = "Финиш";
             // 
             // textBoxLevelName
             // 
@@ -175,18 +176,18 @@
             // labelLevelName
             // 
             this.labelLevelName.AutoSize = true;
-            this.labelLevelName.Location = new System.Drawing.Point(742, 458);
+            this.labelLevelName.Location = new System.Drawing.Point(708, 458);
             this.labelLevelName.Name = "labelLevelName";
-            this.labelLevelName.Size = new System.Drawing.Size(35, 17);
+            this.labelLevelName.Size = new System.Drawing.Size(72, 17);
             this.labelLevelName.TabIndex = 18;
-            this.labelLevelName.Text = "Text";
+            this.labelLevelName.Text = "Название";
             // 
             // checkBoxSpace
             // 
             this.checkBoxSpace.AutoSize = true;
             this.checkBoxSpace.Checked = true;
             this.checkBoxSpace.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxSpace.Location = new System.Drawing.Point(1047, 418);
+            this.checkBoxSpace.Location = new System.Drawing.Point(1047, 423);
             this.checkBoxSpace.Name = "checkBoxSpace";
             this.checkBoxSpace.Size = new System.Drawing.Size(80, 21);
             this.checkBoxSpace.TabIndex = 19;

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 using System.Windows.Forms;
 
 namespace StringSwap
@@ -19,17 +18,17 @@ namespace StringSwap
         //Замена текста
         private void buttonTextReplace_Click(object sender, EventArgs e)
         {
-            string res = richTextBoxStart.Text;
-            res = res.Replace(textBoxWhat.Text, textBoxOnWhat.Text);
-            richTextBoxFinish.Text = res;
+            string input = richTextBoxStart.Text;
+            string output = input.Replace(textBoxWhat.Text, textBoxOnWhat.Text);
+            richTextBoxFinish.Text = output;
         }
 
         //Замена текста после "|"
         private void buttonTextReplaceAfterDelimeter_Click(object sender, EventArgs e)
         {
-            string res = richTextBoxStart.Text;
-            res = Methods.replaceWithDelimeter(textBoxWhat.Text, textBoxOnWhat.Text, res);
-            richTextBoxFinish.Text = res;
+            string input = richTextBoxStart.Text;
+            string output = Methods.ReplaceWithDelimeter(textBoxWhat.Text, textBoxOnWhat.Text, input);
+            richTextBoxFinish.Text = output;
         }
 
         //Генератор галерей
@@ -41,80 +40,48 @@ namespace StringSwap
             string add = textBoxExtension.Text;
             if (checkBoxSpace.Checked)
                 levelName += " ";
-            string res = Methods.Generator(levelName, left, right, add);
-            richTextBoxFinish.Text = res;
+            string output = Methods.Generator(levelName, left, right, add);
+            richTextBoxFinish.Text = output;
         }
 
         //Замена кавычек на елочки. Простая, на вложенных кавычках не работает.
         private void заменаКавычекToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StringBuilder start = new StringBuilder(richTextBoxStart.Text);
-            bool first = true;
-            for (int i = 0; i < start.Length; i++)
-            {
-                char symb = start[i];
-                if (symb == '"')
-                {
-                    start[i] = first ? '«' : '»';
-                    first = !first;
-                }
-            }
-            richTextBoxFinish.Text = start.ToString();
+            string input = richTextBoxStart.Text;
+            string output = Methods.ReplaceQuotations(input);
+            richTextBoxFinish.Text = output;
         }
 
         //Переворачивает список (построчно первый становится последним, и т.д.)
         private void переворачиваниеСпискаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string start = richTextBoxStart.Text;
-            string finish = Methods.TranformText(start);
-            richTextBoxFinish.Text = finish;
+            string input = richTextBoxStart.Text;
+            string output = Methods.TranformText(input);
+            richTextBoxFinish.Text = output;
         }
 
         //Формирование строки для удаления файлов на Special:Unused после выделения изображений
         private void удалениеИзображенийToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string res = richTextBoxStart.Text;
-            string finalList = "";
-            string[] arr = res.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
-            int count = 0;
-            for (int i = 0; i < arr.Length; i++)
-            {
-                string buf = arr[i].Trim();
-                if (buf.Length >= 5 && !buf.Contains("КБ") && !buf.Contains("МБ"))
-                {
-                    if (count == 0)
-                    {
-                        count++;
-                        finalList += "File:" + buf + "\r\n";
-                    }
-                    else
-                        count = 0;
-                }
-            }
-            richTextBoxFinish.Text = finalList;
+            string input = richTextBoxStart.Text;
+            string output = Methods.GetNamesForUnusedFiles(input);
+            richTextBoxFinish.Text = output;
         }
 
         //Формирует ссылки для инфобокса на основе списка страниц
         private void спискиДляНавбоксовToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string text = richTextBoxStart.Text;
-            string[] arr = text.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
-            string output = "";
-            for (int i = 0; i < arr.Length; i++)
-            {
-                output += "[[" + arr[i] + "]]";
-                if (i != arr.Length - 1)
-                    output += " • ";
-            }
+            string input = richTextBoxStart.Text;
+            string output = Methods.GenerateNavbox(input);
             richTextBoxFinish.Text = output;
         }
 
 
         private void удалениеГалерейToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string start = richTextBoxStart.Text;
-            string finish = Methods.AddFilePrefix(start);
-            richTextBoxFinish.Text = finish;
+            string input = richTextBoxStart.Text;
+            string output = Methods.AddFilePrefix(input);
+            richTextBoxFinish.Text = output;
         }
 
         // This code is commented because it uses WikiFunctions DLL from AutoWikiBrowser. Also it was only for testing and now I don't use it. 
