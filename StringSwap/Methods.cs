@@ -50,8 +50,13 @@ namespace StringSwap
         {
             string filesList = "";
             string[] arr = text.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
-            for (int i = 0; i < arr.Length; i += 4)
-                filesList += "File:" + arr[i].Trim() + "\r\n";
+            for (int i = 0; i < arr.Length; i += 4) 
+            {
+                string name = arr[i].Trim();
+                if (arr[i + 1].Trim() == "Воспроизвести звук")
+                    i++;
+                filesList += "File:" + name + "\r\n";
+            }
             return filesList;
         }
 
