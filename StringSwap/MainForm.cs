@@ -15,7 +15,6 @@ namespace StringSwap
             ((ToolStripDropDownItem)sender).ShowDropDown();
         }
 
-        //Замена текста
         private void buttonTextReplace_Click(object sender, EventArgs e)
         {
             string input = richTextBoxStart.Text;
@@ -23,7 +22,6 @@ namespace StringSwap
             richTextBoxFinish.Text = output;
         }
 
-        //Замена текста после "|"
         private void buttonTextReplaceAfterDelimeter_Click(object sender, EventArgs e)
         {
             string input = richTextBoxStart.Text;
@@ -31,7 +29,6 @@ namespace StringSwap
             richTextBoxFinish.Text = output;
         }
 
-        //Генератор галерей
         private void buttonGalleryGenerator_Click(object sender, EventArgs e)
         {
             int left = int.Parse(textBoxL.Text);
@@ -52,7 +49,6 @@ namespace StringSwap
             richTextBoxFinish.Text = output;
         }
 
-        //Переворачивает список (построчно первый становится последним, и т.д.)
         private void переворачиваниеСпискаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string input = richTextBoxStart.Text;
@@ -83,19 +79,5 @@ namespace StringSwap
             string output = Methods.AddFilePrefix(input);
             richTextBoxFinish.Text = output;
         }
-
-        // This code is commented because it uses WikiFunctions DLL from AutoWikiBrowser. Also it was only for testing and now I don't use it. 
-        //private void removeInfoboxParams()
-        //{
-        //    Regex InfoboxCustomLvl = Tools.NestedTemplateRegex(new List<string>("Пользовательский уровень".Split(',')));
-        //    string text = richTextBoxStart.Text;
-        //    foreach (Match m in InfoboxCustomLvl.Matches(text))
-        //    {
-        //        string InfoboxUKplaceCall = m.Value;
-        //        string update = Tools.RemoveTemplateParameters(InfoboxUKplaceCall, new List<string> { "формы", "порталы", "Формы", "Порталы" });
-        //        text = text.Replace(m.Value, update);
-        //    }
-        //    richTextBoxFinish.Text = text;
-        //}
     }
 }

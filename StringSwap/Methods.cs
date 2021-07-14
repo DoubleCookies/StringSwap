@@ -88,9 +88,7 @@ namespace StringSwap
                 if (i % 2 == 0)
                     continue;
                 else
-                {
                     arr[i] = arr[i].Replace(what, onWhat);
-                }
             }
             text = "";
             for (int i = 0; i < arr.Length; i++)
@@ -105,7 +103,7 @@ namespace StringSwap
         }
 
         /// <summary>
-        /// Метод для генерации списка файлов для галерей на GDWiki в указанном диапазоне
+        /// Метод для генерации списка файлов для галерей в указанном диапазоне
         /// </summary>
         /// <param name="basic">Название файла</param>
         /// <param name="left">Левая граница диапазона</param>
@@ -117,10 +115,9 @@ namespace StringSwap
             string res = "";
             for (int i = left; i <= right; i++)
             {
+                res += basic + "(" + i + ")." + extention;
                 if (i != right)
-                    res += basic + "(" + i + ")." + extention + "\r\n";
-                else
-                    res += basic + "(" + i + ")." + extention;
+                    res += "\r\n";
             }
             return res;
         }
