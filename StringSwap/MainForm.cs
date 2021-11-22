@@ -18,14 +18,14 @@ namespace StringSwap
         private void buttonTextReplace_Click(object sender, EventArgs e)
         {
             string input = richTextBoxStart.Text;
-            string output = input.Replace(textBoxWhat.Text, textBoxOnWhat.Text);
+            string output = input.Replace(textBoxSourceFragment.Text, textBoxReplaceFragment.Text);
             richTextBoxFinish.Text = output;
         }
 
         private void buttonTextReplaceAfterDelimeter_Click(object sender, EventArgs e)
         {
             string input = richTextBoxStart.Text;
-            string output = Methods.ReplaceWithDelimeter(textBoxWhat.Text, textBoxOnWhat.Text, input);
+            string output = Methods.ReplaceWithDelimeter(textBoxSourceFragment.Text, textBoxReplaceFragment.Text, input);
             richTextBoxFinish.Text = output;
         }
 

@@ -31,8 +31,8 @@
             this.richTextBoxStart = new System.Windows.Forms.RichTextBox();
             this.richTextBoxFinish = new System.Windows.Forms.RichTextBox();
             this.buttonTextReplace = new System.Windows.Forms.Button();
-            this.textBoxWhat = new System.Windows.Forms.TextBox();
-            this.textBoxOnWhat = new System.Windows.Forms.TextBox();
+            this.textBoxSourceFragment = new System.Windows.Forms.TextBox();
+            this.textBoxReplaceFragment = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonTextReplaceAfterDelimeter = new System.Windows.Forms.Button();
@@ -81,19 +81,19 @@
             this.buttonTextReplace.UseVisualStyleBackColor = true;
             this.buttonTextReplace.Click += new System.EventHandler(this.buttonTextReplace_Click);
             // 
-            // textBoxWhat
+            // textBoxSourceFragment
             // 
-            this.textBoxWhat.Location = new System.Drawing.Point(85, 417);
-            this.textBoxWhat.Name = "textBoxWhat";
-            this.textBoxWhat.Size = new System.Drawing.Size(242, 22);
-            this.textBoxWhat.TabIndex = 6;
+            this.textBoxSourceFragment.Location = new System.Drawing.Point(85, 417);
+            this.textBoxSourceFragment.Name = "textBoxSourceFragment";
+            this.textBoxSourceFragment.Size = new System.Drawing.Size(242, 22);
+            this.textBoxSourceFragment.TabIndex = 6;
             // 
-            // textBoxOnWhat
+            // textBoxReplaceFragment
             // 
-            this.textBoxOnWhat.Location = new System.Drawing.Point(86, 455);
-            this.textBoxOnWhat.Name = "textBoxOnWhat";
-            this.textBoxOnWhat.Size = new System.Drawing.Size(241, 22);
-            this.textBoxOnWhat.TabIndex = 7;
+            this.textBoxReplaceFragment.Location = new System.Drawing.Point(86, 455);
+            this.textBoxReplaceFragment.Name = "textBoxReplaceFragment";
+            this.textBoxReplaceFragment.Size = new System.Drawing.Size(241, 22);
+            this.textBoxReplaceFragment.TabIndex = 7;
             // 
             // label1
             // 
@@ -280,8 +280,8 @@
             this.Controls.Add(this.buttonTextReplaceAfterDelimeter);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxOnWhat);
-            this.Controls.Add(this.textBoxWhat);
+            this.Controls.Add(this.textBoxReplaceFragment);
+            this.Controls.Add(this.textBoxSourceFragment);
             this.Controls.Add(this.buttonTextReplace);
             this.Controls.Add(this.richTextBoxFinish);
             this.Controls.Add(this.richTextBoxStart);
@@ -301,8 +301,8 @@
         private System.Windows.Forms.RichTextBox richTextBoxStart;
         private System.Windows.Forms.RichTextBox richTextBoxFinish;
         private System.Windows.Forms.Button buttonTextReplace;
-        private System.Windows.Forms.TextBox textBoxWhat;
-        private System.Windows.Forms.TextBox textBoxOnWhat;
+        private System.Windows.Forms.TextBox textBoxSourceFragment;
+        private System.Windows.Forms.TextBox textBoxReplaceFragment;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonTextReplaceAfterDelimeter;
